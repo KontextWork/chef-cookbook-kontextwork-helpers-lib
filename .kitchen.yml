@@ -24,8 +24,11 @@ suites:
     run_list:
       - - recipe[kontextwork-helpers-lib-test::attribute_test]
     attributes:
-      sshd:
-        sshd_config:
-          Port: 22
+      mykey:
+        nested1: 'kitchen arg'
+  - name: default-attribute-test
+    run_list:
+      - - recipe[kontextwork-helpers-lib-test::attribute_test]
+    default_attributes:
       mykey:
         nested1: 'kitchen arg'
