@@ -1,4 +1,4 @@
-name 'site-helpers-lib'
+name 'kontextwork-helpers-lib'
 maintainer 'Eugen Mayer'
 maintainer_email 'eugen.mayer@kontextwork.de'
 license 'all_rights'
