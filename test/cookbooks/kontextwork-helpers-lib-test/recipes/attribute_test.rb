@@ -26,4 +26,4 @@ node.default[:mykey][:nested1] = 'val2'
 showstate('after node.default set to val2')
 
 node.default[:mykey][:nested1] = valOrDefault(node.dig(:mykey, :nested1), 'def value')
-showstate('after set node.default from node.normal')
+showstate('after set node.default from node')

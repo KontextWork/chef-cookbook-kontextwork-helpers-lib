@@ -20,6 +20,9 @@ platforms:
       privileged: true
 
 suites:
+  - name: no-attribute-test
+    run_list:
+      - recipe[kontextwork-helpers-lib-test::attribute_test]
   - name: attribute-test
     run_list:
       - recipe[kontextwork-helpers-lib-test::attribute_test]

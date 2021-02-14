@@ -49,6 +49,7 @@ The test provision via `dokken`, so be sure to have a docker engine running
 
 Right now we are testing the different sources and aspects of attribute precendence
 
+- `no-attribute-test` no extra attributes in kitchen - so just attribute defaults
 - `attribute-test` uses kitchen node `attributes` and tests if you can override `node.default` values with it
   The result is: no
 - `default-attribute-test` uses `default_attributes` as node attributes, which seem to no be supported at all
