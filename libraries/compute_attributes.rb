@@ -10,3 +10,4 @@ module Compute
 end
 
 Chef::Recipe.include(Compute::Attributes)
+Chef::Resource.include(Compute::Attributes)
