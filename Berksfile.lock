@@ -1,0 +1,13 @@
+DEPENDENCIES
+  kontextwork-helpers-lib
+    path: .
+    metadata: true
+  kontextwork-helpers-lib-test
+    path: test/cookbooks/kontextwork-helpers-lib-test
+
+GRAPH
+  apt (7.4.0)
+  kontextwork-helpers-lib (0.2.0)
+  kontextwork-helpers-lib-test (0.0.1)
+    apt (>= 0.0.0)
+    kontextwork-helpers-lib (>= 0.0.0)

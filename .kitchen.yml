@@ -1,0 +1,31 @@
+---
+driver:
+  hostname: test # Hostname is used in the tests so should be fixed
+  name: dokken
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: debian-10
+    driver:
+      image: dokken/debian-10
+      pid_one_command: /bin/systemd
+      privileged: true
+
+suites:
+  - name: attribute-test
+    run_list:
+      - - recipe[kontextwork-helpers-lib-test::attribute_test]
+    attributes:
+      sshd:
+        sshd_config:
+          Port: 22
+      mykey:
+        nested1: 'kitchen arg'

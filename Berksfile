@@ -4,5 +4,5 @@ source 'https://supermarket.chef.io'
 metadata
 
 group :integration do
-  cookbook 'kontextwork-libraries-testt', path: 'test/cookbooks/kontextwork-libraries-test'
+  cookbook 'kontextwork-helpers-lib-test', path: 'test/cookbooks/kontextwork-helpers-lib-test'
 end

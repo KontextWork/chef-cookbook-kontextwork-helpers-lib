@@ -1,8 +1,5 @@
 prepare:
-	rm -fr cookbooks
-	chef exec berks install
-	chef exec berks update
-	chef exec berks vendor cookbooks
+	chef exec bundle install
 
 test: prepare
-	chef exec kitchen destroy
+	chef exec kitchen converge attribute-test
