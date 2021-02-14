@@ -1,7 +1,7 @@
 module Site
   module Attributes
     # This function creates a file with init system type as a content
-    def defaultIfNil(_val, _default)
+    def defaultIfNil(val, default)
       return val unless val.nil?
 
       default
