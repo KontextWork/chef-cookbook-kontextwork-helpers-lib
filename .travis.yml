@@ -1,0 +1,23 @@
+dist: xenial
+language: ruby
+
+rvm:
+  - 2.5.4
+
+cache: bundler
+sudo: required
+
+services:
+  - docker
+
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk
+
+install: CHEF_LICENSE=accept chef exec bundle install --jobs=3 --retry=3 --without='vagrant'
+
+before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
+
+script:
+  - chef exec bundle install
+  - chef exec bundle exec docker version
+  - chef exec bundle exec kitchen --version
+  - time chef exec bundle exec kitchen test -l debug
