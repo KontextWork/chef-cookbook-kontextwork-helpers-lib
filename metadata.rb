@@ -1,0 +1,7 @@
+name 'kontextwork-helpers-lib'
+maintainer 'Eugen Mayer'
+maintainer_email 'eugen.mayer@kontextwork.de'
+license 'all_rights'
+description 'Installs/kontextwork cookbook helpers'
+long_description 'Installs/kontextwork cookbook helpers'
+version '0.2.0'
