@@ -20,21 +20,18 @@ platforms:
       privileged: true
 
 suites:
-  - name: no-attribute-test
+  # attribute behavior with only the cookbook default attributes set
+  - name: no-attributes-test
     run_list:
       - recipe[kontextwork-helpers-lib-test::attribute_test]
-  - name: attribute-test
+  # overriding attributes via kitchen attributes
+  - name: attributes-test
     run_list:
       - recipe[kontextwork-helpers-lib-test::attribute_test]
     attributes:
       mykey:
         nested1: 'kitchen arg'
-  - name: default-attribute-test
-    run_list:
-      - recipe[kontextwork-helpers-lib-test::attribute_test]
-    default_attributes:
-      mykey:
-        nested1: 'kitchen arg'
-  - name: role-attribute-test
+  # overriding attributes via role 'default_attributes'
+  - name: role-attributes-test
     run_list:
       - role[attribute_test]

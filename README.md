@@ -49,9 +49,8 @@ The test provision via `dokken`, so be sure to have a docker engine running
 
 Right now we are testing the different sources and aspects of attribute precendence
 
-- `no-attribute-test` no extra attributes in kitchen - so just attribute defaults
-- `attribute-test` uses kitchen node `attributes` and tests if you can override `node.default` values with it
+- `no-attributes-test` no extra attributes in kitchen - so just attribute defaults
+- `attributes-test` uses kitchen node `attributes` and tests if you can override `node.default` values with it
   The result is: no
-- `default-attribute-test` uses `default_attributes` as node attributes, which seem to no be supported at all
-- `roles-attribute-test` uses the role at `test/integration/roles/attributes_test.json` to define `default_attributes`
+- `roles-attributes-test` uses the role at `test/integration/roles/attributes_test.json` to define `default_attributes`
   and the run list. The result of this is fairly suprising, the entire order is messed up

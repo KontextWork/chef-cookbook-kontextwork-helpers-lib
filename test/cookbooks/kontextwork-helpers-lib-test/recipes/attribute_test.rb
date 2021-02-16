@@ -15,7 +15,7 @@ def showstate(segment)
     level :info
   end
 
-  log "pickNodeOtherWiseDefaultAttribute: #{nodeOrDefaultAttr(:mykey, :nested1)}" do
+  log "nodeOrDefaultAttr: #{nodeOrDefaultAttr(:mykey, :nested1)}" do
     level :info
   end
 end
